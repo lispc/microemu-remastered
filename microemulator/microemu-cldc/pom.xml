@@ -38,7 +38,7 @@
 
     <build>
         <plugins>
-            <plugin>
+            <!--plugin>
                 <groupId>com.pyx4me</groupId>
                 <artifactId>proguard-maven-plugin</artifactId>
                 <version>${pyx4meVersion}</version>
@@ -56,9 +56,9 @@
                         <lib>${javaRunTimeJar}</lib>
                     </libs>
                 </configuration>
-            </plugin>
+            </plugin-->
 
-            <plugin>
+            <!--plugin>
                 <groupId>net.sf.jour</groupId>
                 <artifactId>jour-maven-plugin</artifactId>
                 <version>${jourVersion}</version>
@@ -74,7 +74,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin-->
 
         </plugins>
     </build>

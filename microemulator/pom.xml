@@ -57,20 +57,20 @@
     </mailingLists>
 
     <modules>
-        <module>api</module>
+        <!--module>api</module-->
         <module>microemu-cldc</module>
         <module>microemu-midp</module>
-        <module>microemu-injected</module>
+        <!--module>microemu-injected</module-->
         <module>microemu-javase</module>
         <module>microemu-javase-swing</module>
-        <module>microemu-javase-applet</module>
+        <!--module>microemu-javase-applet</module-->
         <!-- only buildByMicroEmulatorTeam edit settings.xml to enable -->
         <!--module>microemu-javase-swt</module-->
         <module>microemu-extensions</module>
-        <module>microemu-examples</module>
+        <!--module>microemu-examples</module-->
         <module>microemulator</module>
         <!-- ignore for release -->
-        <module>microemu-tests</module>
+        <!--module>microemu-tests</module-->
 
         <!-- Only during build on server
             Use mvn -P webstart  to include  microemu-webstart
@@ -81,18 +81,16 @@
     </modules>
 
 
-    <ciManagement>
+    <!--ciManagement>
         <system>CruiseControl</system>
         <url>http://pyx4j.com/cruisecontrol-public/</url>
-    </ciManagement>
+    </ciManagement-->
 
-    <distributionManagement>
+    <!--distributionManagement>
         <site>
-            <!-- see also profile release below -->
             <id>m2-site-snapshot</id>
             <url>file:///home/apache/microemu</url>
         </site>
-        <!-- see profile release -->
         <repository>
             <id>pyx4j.com-file-development</id>
             <url>file:///home/apache/pyx4j-repository/maven2-snapshot</url>
@@ -103,7 +101,7 @@
             <url>file:///home/apache/pyx4j-repository/maven2-snapshot</url>
         </snapshotRepository>
 
-    </distributionManagement>
+    </distributionManagement-->
 
 <!-- 4snapshot begin { -->
 
@@ -144,13 +142,13 @@
     <properties>
         <buildLabel>${project.version}</buildLabel>
         <pyx4meVersion>2.0.3</pyx4meVersion>
-        <jourVersion>2.0.4-SNAPSHOT</jourVersion>
+        <jourVersion>2.0.3</jourVersion>
         <!-- See OS X profile -->
         <javaRunTimeJar>${java.home}/lib/rt.jar</javaRunTimeJar>
         <javaRunTimeSecurityJar>${java.home}/lib/jsse.jar</javaRunTimeSecurityJar>
         <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
 
-        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+        <!--project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding-->
     </properties>
 
     <dependencyManagement>
@@ -314,7 +312,7 @@
         <pluginManagement>
             <plugins>
                 <!-- m2bug; the same dependencies declared in microemu-test-midlet and api stub projects will not work if building from root -->
-                <plugin>
+                <!--plugin>
                     <groupId>net.sf.jour</groupId>
                     <artifactId>jour-maven-plugin</artifactId>
                     <version>${jourVersion}</version>
@@ -325,15 +323,15 @@
                             <version>${pyx4meVersion}</version>
                         </dependency>
                     </dependencies>
-                </plugin>
+                </plugin-->
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>2.3.2</version>
                     <configuration>
-                        <source>1.5</source>
-                        <target>1.5</target>
+                        <source>1.8</source>
+                        <target>1.8</target>
                     </configuration>
                 </plugin>
 
@@ -401,8 +399,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -688,7 +686,7 @@
                         <configuration>
                             <linkXref>true</linkXref>
                             <minimumTokens>100</minimumTokens>
-                            <targetJdk>1.5</targetJdk>
+                            <targetJdk>1.8</targetJdk>
                         </configuration>
                     </plugin>
                     <plugin>

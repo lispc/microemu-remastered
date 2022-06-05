@@ -20,7 +20,46 @@
     <description>MicroEmulator one jar assembly for distribution</description>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-device-large</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-device-minimum</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-device-resizable</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-75</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-82</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-120</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-135</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-nokiaui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-javase-swing</artifactId>
@@ -38,13 +77,13 @@
         -->
 
         <!-- Used for ready for applet Preprocessor should be only in pakaged jar -->
-        <dependency>
+        <!--dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-injected</artifactId>
             <version>${project.version}</version>
             <classifier>inject</classifier>
             <optional>true</optional>
-        </dependency>
+        </dependency-->
 
     </dependencies>
 

@@ -32,18 +32,18 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+        <!--dependency>
             <groupId>net.sf.jour</groupId>
             <artifactId>jour-instrument</artifactId>
             <scope>test</scope>
             <optional>true</optional>
-        </dependency>
+        </dependency-->
 
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
+            <!--plugin>
                 <groupId>com.pyx4me</groupId>
                 <artifactId>proguard-maven-plugin</artifactId>
                 <version>${pyx4meVersion}</version>
@@ -61,7 +61,7 @@
                         <lib>${javaRunTimeJar}</lib>
                     </libs>
                 </configuration>
-            </plugin>
+            </plugin-->
 
             <!-- TODO enable when javax.microedition.rms.RecordListener fixed.
             <plugin>
